@@ -1,0 +1,574 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>agoodkind_maple_project21.html</title>
+<!-- Created by Maple 2018.0, Mac OS X -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><font color="#78000e" size="3" face="Courier New"><strong># Alexander Goodkind</strong></font>&nbsp;</p>
+<p align="left"><font color="#78000e" size="3" face="Courier New"><strong># 12/03/2018</strong></font>&nbsp;</p>
+<p align="left"><font color="#78000e" size="3" face="Courier New"><strong># DE Maple Project 2</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_1.gif" width="62" height="18" alt="restart; 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># load inntrans</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_2.gif" width="114" height="18" alt="with(inttrans); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_3.gif" width="117" height="18" alt="with(DEtools); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_4.gif" width="170" height="18" alt="with(IntegrationTools); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_5.gif" width="112" height="18" alt="with(Student); -1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># define f(t) as an expression that will be transformed</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_6.gif" width="126" height="18" alt="f := `*`(t, `*`(cos(`+`(`*`(3, `*`(t)))))); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_7.gif" width="104" height="18" alt="Typesetting:-mprintslash([f := `*`(t, `*`(cos(`+`(`*`(3, `*`(t))))))], [`*`(t, `*`(cos(`+`(`*`(3, `*`(t))))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># perform laplace transform</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_8.gif" width="148" height="18" alt="F := laplace(f, t, s); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_9.gif" width="120" height="51" alt="Typesetting:-mprintslash([F := `/`(`*`(`+`(`*`(`^`(s, 2)), `-`(9))), `*`(`^`(`+`(`*`(`^`(s, 2)), 9), 2)))], [`/`(`*`(`+`(`*`(`^`(s, 2)), `-`(9))), `*`(`^`(`+`(`*`(`^`(s, 2)), 9), 2)))])" align="center" border="0"></td>
+<td width='5%' align='center'>(2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># expand and simplify</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_10.gif" width="192" height="18" alt="" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># recover f(t) by performing an inverse laplace</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_11.gif" width="134" height="18" alt="invlaplace(F, s, t); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_12.gif" width="72" height="18" alt="`*`(t, `*`(cos(`+`(`*`(3, `*`(t))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">########################################################################################################</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># Solving IVPs</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># load inntrans and define the DE</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_13.gif" width="281" height="18" alt="de := `+`(diff(x(t), `$`(t, 2)), `*`(4, `*`(x(t)))) = sin(`+`(`*`(3, `*`(t)))); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_14.gif" width="234" height="47" alt="Typesetting:-mprintslash([de := `+`(diff(x(t), `$`(t, 2)), `*`(4, `*`(x(t)))) = sin(`+`(`*`(3, `*`(t))))], [`+`(diff(diff(x(t), t), t), `*`(4, `*`(x(t)))) = sin(`+`(`*`(3, `*`(t))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># initial conditions</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_15.gif" width="230" height="18" alt="inits := {x(0) = 0, (D(x))(0) = 0}; 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_16.gif" width="222" height="18" alt="Typesetting:-mprintslash([inits := {x(0) = 0, (D(x))(0) = 0}], [{x(0) = 0, (D(x))(0) = 0}])" align="center" border="0"></td>
+<td width='5%' align='center'>(5)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># take laplace of the de</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_17.gif" width="166" height="18" alt="DE := laplace(de, t, s); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_18.gif" width="525" height="43" alt="Typesetting:-mprintslash([DE := `+`(`*`(`^`(s, 2), `*`(laplace(x(t), t, s))), `-`((D(x))(0)), `-`(`*`(s, `*`(x(0)))), `*`(4, `*`(laplace(x(t), t, s)))) = `+`(`/`(`*`(3), `*`(`+`(`*`(`^`(s, 2)), 9))))]..." align="center" border="0"></td>
+<td width='5%' align='center'>(6)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># solve in terms of X(s)</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_19.gif" width="242" height="18" alt="X := solve(DE, laplace(x(t), t, s)); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_20.gif" width="377" height="47" alt="Typesetting:-mprintslash([X := `/`(`*`(`+`(`*`(x(0), `*`(`^`(s, 3))), `*`((D(x))(0), `*`(`^`(s, 2))), `*`(9, `*`(s, `*`(x(0)))), `*`(9, `*`((D(x))(0))), 3)), `*`(`+`(`*`(`^`(s, 2)), 9), `*`(`+`(`*`(`^..." align="center" border="0"></td>
+<td width='5%' align='center'>(7)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># subsitute initial conditions</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_21.gif" width="143" height="18" alt="X := subs(inits, X); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_22.gif" width="174" height="43" alt="Typesetting:-mprintslash([X := `+`(`/`(`*`(3), `*`(`+`(`*`(`^`(s, 2)), 9), `*`(`+`(`*`(`^`(s, 2)), 4)))))], [`+`(`/`(`*`(3), `*`(`+`(`*`(`^`(s, 2)), 9), `*`(`+`(`*`(`^`(s, 2)), 4)))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(8)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># perform inverse laplace to get x(t) the solution</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_23.gif" width="166" height="18" alt="x := invlaplace(X, s, t); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_24.gif" width="203" height="39" alt="Typesetting:-mprintslash([x := `+`(`-`(`*`(`/`(1, 5), `*`(sin(`+`(`*`(3, `*`(t))))))), `*`(`/`(3, 10), `*`(sin(`+`(`*`(2, `*`(t)))))))], [`+`(`-`(`*`(`/`(1, 5), `*`(sin(`+`(`*`(3, `*`(t))))))), `*`(`/..." align="center" border="0"></td>
+<td width='5%' align='center'>(9)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">########################################################################################################</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># Further investigation</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_25.gif" width="116" height="18" alt="f := `*`(f, `*`(sin(`*`(n, `*`(t))))); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_26.gif" width="157" height="18" alt="Typesetting:-mprintslash([f := `*`(t, `*`(cos(`+`(`*`(3, `*`(t)))), `*`(sin(`*`(n, `*`(t))))))], [`*`(t, `*`(cos(`+`(`*`(3, `*`(t)))), `*`(sin(`*`(n, `*`(t))))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(10)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_27.gif" width="148" height="18" alt="F := laplace(f, t, s); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_28.gif" width="355" height="55" alt="Typesetting:-mprintslash([F := `+`(`/`(`*`(2, `*`(n, `*`(s, `*`(`+`(`*`(`^`(n, 4)), `*`(2, `*`(`^`(n, 2), `*`(`^`(s, 2)))), `*`(`^`(s, 4)), `*`(18, `*`(`^`(n, 2))), `-`(`*`(18, `*`(`^`(s, 2)))), `-`(2..." align="center" border="0"></td>
+<td width='5%' align='center'>(11)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_29.gif" width="437" height="55" alt="invlaplace(`+`(`/`(`*`(2, `*`(n, `*`(s, `*`(`+`(`*`(`^`(n, 4)), `*`(2, `*`(`^`(n, 2), `*`(`^`(s, 2)))), `*`(`^`(s, 4)), `*`(18, `*`(`^`(n, 2))), `-`(`*`(18, `*`(`^`(s, 2)))), `-`(243)))))), `*`(`^`(`+..." align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_30.gif" width="248" height="39" alt="`+`(`*`(`/`(1, 2), `*`(t, `*`(`+`(sin(`*`(`+`(3, n), `*`(t))), sin(`*`(`+`(n, `-`(3)), `*`(t))))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(12)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="6" face="Courier New"><strong># Conjecture: as n approaches a large number, the line approaches the straight line s=0 (y=0), that is, the area under the curve of the laplace approaches 0 </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># defining animation range for n</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_31.gif" width="78" height="18" alt="r := 1 .. 90" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_32.gif" width="78" height="18" alt="Typesetting:-mprintslash([r := 1 .. 90], [1 .. 90])" align="center" border="0"></td>
+<td width='5%' align='center'>(13)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># plotting from 1..90 </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_33.gif" width="325" height="18" alt="plots[animate](plot, [F(s)], n = r, frames = 90); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_34.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># tcos(3t)cos(nt)</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_35.gif" width="156" height="18" alt="f := `*`(t, `*`(cos(`+`(`*`(3, `*`(t)))), `*`(cos(`*`(n, `*`(t))))))" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_36.gif" width="159" height="18" alt="Typesetting:-mprintslash([f := `*`(t, `*`(cos(`+`(`*`(3, `*`(t)))), `*`(cos(`*`(n, `*`(t))))))], [`*`(t, `*`(cos(`+`(`*`(3, `*`(t)))), `*`(cos(`*`(n, `*`(t))))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(14)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_37.gif" width="387" height="18" alt="plots[animate](plot, [laplace(f, t, s)], n = r, frames = 90); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_38.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_39.gif" width="209" height="18" alt="fs := sin(`*`(n, `*`(t))); 1; fc := cos(`*`(n, `*`(t))); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_40.gif" width="101" height="18" alt="Typesetting:-mprintslash([fs := sin(`*`(n, `*`(t)))], [sin(`*`(n, `*`(t)))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_41.gif" width="103" height="18" alt="Typesetting:-mprintslash([fc := cos(`*`(n, `*`(t)))], [cos(`*`(n, `*`(t)))])" align="center" border="0"></td>
+<td width='5%' align='center'>(15)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_42.gif" width="468" height="22" alt="a1 := `*`(exp(t), `*`(fs)); 1; a2 := `*`(exp(t), `*`(fc)); 1; A1 := laplace(a1, t, s); 1; A2 := laplace(a2, t, s); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_43.gif" width="117" height="22" alt="Typesetting:-mprintslash([a1 := `*`(exp(t), `*`(sin(`*`(n, `*`(t)))))], [`*`(exp(t), `*`(sin(`*`(n, `*`(t)))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_44.gif" width="118" height="22" alt="Typesetting:-mprintslash([a2 := `*`(exp(t), `*`(cos(`*`(n, `*`(t)))))], [`*`(exp(t), `*`(cos(`*`(n, `*`(t)))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_45.gif" width="152" height="43" alt="Typesetting:-mprintslash([A1 := `/`(`*`(n), `*`(`+`(`*`(`^`(`+`(s, `-`(1)), 2)), `*`(`^`(n, 2)))))], [`/`(`*`(n), `*`(`+`(`*`(`^`(`+`(s, `-`(1)), 2)), `*`(`^`(n, 2)))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_46.gif" width="152" height="43" alt="Typesetting:-mprintslash([A2 := `/`(`*`(`+`(s, `-`(1))), `*`(`+`(`*`(`^`(`+`(s, `-`(1)), 2)), `*`(`^`(n, 2)))))], [`/`(`*`(`+`(s, `-`(1))), `*`(`+`(`*`(`^`(`+`(s, `-`(1)), 2)), `*`(`^`(n, 2)))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(16)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_47.gif" width="734" height="83" alt="b1 := `*`(sqrt(t), `*`(fs)); 1; b2 := `*`(sqrt(t), `*`(fc)); 1; B1 := `+`(`/`(`*`(`/`(1, 2), `*`(sqrt(Pi), `*`(sin(`+`(`*`(`/`(3, 2), `*`(arctan(`/`(`*`(n), `*`(s)))))))))), `*`(`^`(`+`(`*`(`^`(n, 2))..." align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_48.gif" width="129" height="23" alt="Typesetting:-mprintslash([b1 := `*`(`^`(t, `/`(1, 2)), `*`(sin(`*`(n, `*`(t)))))], [`*`(`^`(t, `/`(1, 2)), `*`(sin(`*`(n, `*`(t)))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_49.gif" width="130" height="23" alt="Typesetting:-mprintslash([b2 := `*`(`^`(t, `/`(1, 2)), `*`(cos(`*`(n, `*`(t)))))], [`*`(`^`(t, `/`(1, 2)), `*`(cos(`*`(n, `*`(t)))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_50.gif" width="234" height="88" alt="Typesetting:-mprintslash([B1 := `+`(`/`(`*`(`/`(1, 2), `*`(`^`(Pi, `/`(1, 2)), `*`(sin(`+`(`*`(`/`(3, 2), `*`(arctan(`/`(`*`(n), `*`(s)))))))))), `*`(`^`(`+`(`*`(`^`(n, 2)), `*`(`^`(s, 2))), `/`(3, 4)..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_51.gif" width="235" height="88" alt="Typesetting:-mprintslash([B2 := `+`(`/`(`*`(`/`(1, 2), `*`(`^`(Pi, `/`(1, 2)), `*`(cos(`+`(`*`(`/`(3, 2), `*`(arctan(`/`(`*`(n), `*`(s)))))))))), `*`(`^`(`+`(`*`(`^`(n, 2)), `*`(`^`(s, 2))), `/`(3, 4)..." align="center" border="0"></td>
+<td width='5%' align='center'>(17)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_52.gif" width="577" height="22" alt="c1 := `*`(`+`(`*`(`^`(t, 2)), `-`(`*`(3, `*`(t)))), `*`(fs)); 1; c2 := `*`(`+`(`*`(`^`(t, 2)), `-`(`*`(3, `*`(t)))), `*`(fc)); 1; C1 := laplace(c1, t, s); 1; C2 := laplace(c2, t, s); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_53.gif" width="169" height="22" alt="Typesetting:-mprintslash([c1 := `*`(`+`(`*`(`^`(t, 2)), `-`(`*`(3, `*`(t)))), `*`(sin(`*`(n, `*`(t)))))], [`*`(`+`(`*`(`^`(t, 2)), `-`(`*`(3, `*`(t)))), `*`(sin(`*`(n, `*`(t)))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_54.gif" width="170" height="22" alt="Typesetting:-mprintslash([c2 := `*`(`+`(`*`(`^`(t, 2)), `-`(`*`(3, `*`(t)))), `*`(cos(`*`(n, `*`(t)))))], [`*`(`+`(`*`(`^`(t, 2)), `-`(`*`(3, `*`(t)))), `*`(cos(`*`(n, `*`(t)))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_55.gif" width="265" height="51" alt="Typesetting:-mprintslash([C1 := `+`(`-`(`/`(`*`(2, `*`(n, `*`(`+`(`*`(3, `*`(`^`(n, 2), `*`(s))), `*`(3, `*`(`^`(s, 3))), `*`(`^`(n, 2)), `-`(`*`(3, `*`(`^`(s, 2)))))))), `*`(`^`(`+`(`*`(`^`(n, 2)), `..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_56.gif" width="246" height="51" alt="Typesetting:-mprintslash([C2 := `+`(`-`(`/`(`*`(`+`(`-`(`*`(3, `*`(`^`(n, 4)))), `*`(3, `*`(`^`(s, 4))), `*`(6, `*`(`^`(n, 2), `*`(s))), `-`(`*`(2, `*`(`^`(s, 3)))))), `*`(`^`(`+`(`*`(`^`(n, 2)), `*`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(18)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># a.)
+<br># a.1)the first graph looks to be apart of the normal distribution family of functions centered at s=1 when n=3, and as n gets very large it approachs a horizontal line (slope = 0) that approaches an asymptote of y = 0 (aka it approaches the line y=0)
+<br># a.2) the second graph looks to be apart of the family xe^{-x^2}, where there is a horizontal asymptote that is crossed at s=1 and the graph is shift to the right by 1
+<br># as the graph approaches a large n it begins as a positive line (with a very shallow slope) where the slope slowly approachs 0 (that is, the graph approaches the horizontal line y=0)</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_57.gif" width="651" height="18" alt="plots[animate](plot, [A1(s)], n = r, frames = 90); 1; plots[animate](plot, [A2(s)], n = r, frames = 90); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_58.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_59.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_60.gif" width="614" height="18" alt="plots[animate](plot, [B1], n = r, frames = 90); 1; plots[animate](plot, [B2], n = r, frames = 90); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_61.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_62.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>#C.) both graphs approach the line y=0</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_63.gif" width="654" height="18" alt="plots[animate](plot, [C1(s)], n = r, frames = 90); 1; plots[animate](plot, [C2(s)], n = r, frames = 90); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_64.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_65.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># final investigation</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_66.gif" width="363" height="39" alt="plots[animate](plot, [`/`(`*`(sin(`*`(n, `*`(t)))), `*`(t))], n = r, frames = 90); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_67.gif" width="458" height="418" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_68.gif" width="185" height="39" alt="g := proc (t) options operator, arrow; `/`(`*`(sin(`*`(n, `*`(t)))), `*`(t)) end proc; 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_69.gif" width="136" height="39" alt="Typesetting:-mprintslash([g := proc (t) options operator, arrow; `/`(`*`(sin(`*`(n, `*`(t)))), `*`(t)) end proc], [proc (t) options operator, arrow; `/`(`*`(sin(`*`(n, `*`(t)))), `*`(t)) end proc])" align="center" border="0"></td>
+<td width='5%' align='center'>(19)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># The laplace transform..</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_70.gif" width="192" height="18" alt="assume(n, 'integer', `<`(0, n)); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_71.gif" width="162" height="18" alt="G := laplace(g(t), t, s)" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_72.gif" width="134" height="39" alt="Typesetting:-mprintslash([G := arctan(`/`(`*`(n), `*`(s)))], [arctan(`/`(`*`(n), `*`(s)))])" align="center" border="0"></td>
+<td width='5%' align='center'>(20)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/agoodkind_maple_project2_73.gif" width="512" height="21" alt="plots[animate](plot, [G(s), s = `+`(`-`(`*`(10, `*`(Pi)))) .. `+`(`*`(10, `*`(Pi)))], n = 1 .. 999999999, frames = 90); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/agoodkind_maple_project2_74.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong># Conclusion: the graph as n-&gt;a large number, changes from a 1/x looking function (where arctan is taken) to a graph of something similar to the heaviside function where 'off' is at -1.5 and 'on is at 1.5, however there is a vertical line x=0 (G(s)=0), that connects them. </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</body>
+</html>
